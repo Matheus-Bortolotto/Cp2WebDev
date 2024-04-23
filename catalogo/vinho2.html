@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinho Catena Cabernet Sauvignon</title>
+    <link rel="stylesheet" href="../style/vinho1.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </head>
+    <body class="body">
+        <h1>Catena Cabernet Sauvignon 2021</h1>
+        <div class="vinho1">
+            <img src="../img/vinho2.jpg" alt="Catena Cabernet Sauvignon">
+            <div class="preco">R$ 70,00</div>
+            <input type="number" id="spinNumber" min="1" max="999" type="number">
+            <button id="btnComprar">Adicionar ao carrinho</button>
+        </div>
+        <script>
+            document.getElementById('btnComprar').addEventListener('click', function() {
+            Swal.fire({
+            title: 'Adicionado ao carrinho!',
+            text: 'Seu vinho foi adicionado ao carrinho.',
+            icon: 'success',
+            confirmButtonText: 'Continuar comprando'
+            })
+            });
+        </script>
+        <br>
+
+    
+        <input type="text"  placeholder="CUMPOM DE DESCONTO" >
+        <button id="desconto">Aplicar</button><br>
+        <script>
+            document.getElementById("desconto").addEventListener("click", function() {
+            if(desconto == 'fiap2024'){
+                alert ('desconto  aplicado!');
+            }
+            else {
+                alert('Desconto aplicado')
+            }
+            })
+        </script>
+        <div class="texto">
+        <h1>Sobre o vinho</h1>
+            <p>Elaborado com a Cabernet Sauvignon selecionada de cinco diferentes vinhedos de altitude da família Catena Zapata, é um tinto concentrado,</p>
+            <p> que exibe um distinto caráter varietal. Considerado como "soberbo" por Robert Parker, que destacou também seu frescor, os taninos refinados,</p>
+            <p>  ótimo foco e final saboroso. Vinho de entrada da linha Catena, já foi descrito por Jancis Robinson como sofisticado, maduro, bastante complexo,</p>
+            <p> com camadas de um Bordeaux, arrematando a mais alta nota num painel com 50 vinhos argentinos avaliados pela jornalista.</p>
+        </div>
+      
+        <script src="/catalogo.js"></script>
+    </body>
+</html>
+
+

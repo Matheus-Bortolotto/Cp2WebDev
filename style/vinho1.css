@@ -1,0 +1,13 @@
+.vinho1 img {
+    max-width:300px;
+    max-height:480px;
+    width: auto;
+    height: auto;
+}
+
+
+.texto, .vinho1 {
+    display: inline-block;
+    width: 50%;
+    height: 200px;
+  }
