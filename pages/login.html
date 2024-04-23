@@ -12,6 +12,7 @@
 <header>
   <nav class="cabecalho">
     <ul>
+        <li><a href="./login.html">LOGIN</a></li>
       <li><a href="./home.html">HOME</a></li>
       <li><a href="./catalogo.html">CATALOGO</a></li>
       <li><a href="./contato.html">CONTATO</a></li>
@@ -24,7 +25,9 @@
   <main>
     <form>
         <h3>Login</h3>
-        <input type="text" name="email" placeholder="Seu e-mail..." /> <input type="password" name="senha" placeholder="Sua senha......." /> <input type="submit" name="acao" value="Enviar" />
+        <input type="text"  placeholder="Seu e-mail..." id="login" /> 
+        <input type="password"  placeholder="Sua senha......." id="senha" /> 
+        <input type="submit" name="acao" value="Enviar" onclick="logar()" />
     </form>
   </main>
 
