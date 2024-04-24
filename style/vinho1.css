@@ -1,13 +1,87 @@
-.vinho1 img {
-    max-width:300px;
-    max-height:480px;
-    width: auto;
-    height: auto;
+.container img {
+    max-width:450px;
+    max-height:450px;
+    margin-left: 100px;
+    /* width: auto;
+    height: auto; */
 }
 
+.container{
+    width: 2000px;
+    height: 800px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex;
+}
 
-.texto, .vinho1 {
-    display: inline-block;
-    width: 50%;
-    height: 200px;
+  .div1{
+    width: 500px;
+    height: 500px;
+}
+
+.div2{
+    width: 900px;
+    height: 900px;
+    font-size: 28px;
+} 
+ 
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px;
+    background-color: #800020;
+  }
+  .cabecalho nav {
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+  }
+  .cabecalho ul {
+    list-style-type: none;
+    padding: 0px, 10px;
+    display: flex;
+  }
+  .cabecalho li {
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+    margin: 10px 5px;
+    padding: 5px;
+  }
+  
+  .cabecalho a {
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+
+    }
+
+.footer h3 {
+  margin-bottom: 32px;
+}
+
+.footer-contato ul {
+  margin-bottom: 32px;
+}
+
+.footer-contato li:nth-child(even):after {
+  content: "";
+  display: block;
+  max-width: 360px;
+  height: 2px;
+  background: var(--cor-11);
+  margin-top: 16px;
+}
+
+.rodape {
+    position: sticky;
+    margin-top: 10px;
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    background-color: #333333;
+    color: #fff;
+    align-items: center;
   }

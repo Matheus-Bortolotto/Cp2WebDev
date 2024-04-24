@@ -9,28 +9,42 @@
 
     </head>
     <body class="body">
-        <h1>Catena Cabernet Sauvignon 2021</h1>
-        <div class="vinho1">
-            <img src="../img/vinho1.jpg" alt="Catena Cabernet Sauvignon">
-            <div class="preco">R$ 70,00</div>
-            <input type="number" id="spinNumber" min="1" max="999" type="number">
-            <button id="btnComprar">Adicionar ao carrinho</button>
+        <header>
+            <nav class="cabecalho">
+              <ul>
+                <li><a href="../pages/catalogo.html">CATALOGO</a></li>
+                <li><a href="../pages/vinhos.html">VINHO</a></li>
+                <li><a href="../pages/contato.html">CONTATO</a></li>
+                <li><a href="../pages/Informação.html">INFORMAÇÕES</a></li>
+                <li><a href="../pages/combinacoes.html">COMBINAÇÕES</a></li>
+              </ul>
+            </nav>
+          </header>
+        <div class="container">
+            <div class="div1">
+                <h1>Catena Cabernet Sauvignon 2021</h1>
+                <img src="../img/vinho1.jpg" alt="">
+                <div class="preco">R$ 70,00</div>
+                <input type="number" id="spinNumber" min="1" max="999" type="number">
+                <button id="btnComprar">Adicionar ao carrinho</button>
+                <input type="text"  placeholder="CUMPOM DE DESCONTO" >
+                <button id="desconto">Aplicar</button><br>
+            </div>
+                
+            <div class="div2">
+                <h1>SOBRE O VINHO</h1>
+                </p>Elaborado com a Cabernet Sauvignon selecionada de cinco diferentes vinhedos de altitude da família Catena Zapata, 
+                 é um tinto concentrado, que exibe um distinto caráter varietal. Considerado como "soberbo" por Robert Parker, que destacou também seu frescor, 
+                 os taninos refinados, ótimo foco e final saboroso. Vinho de entrada da linha Catena, já foi descrito por Jancis Robinson como sofisticado, maduro,
+                bastante complexo, com camadas de um Bordeaux, arrematando a mais alta nota num painel com 50 vinhos argentinos avaliados pela jornalista.</p>
+            </div>
+            
         </div>
-        <script>
-            document.getElementById('btnComprar').addEventListener('click', function() {
-            Swal.fire({
-            title: 'Adicionado ao carrinho!',
-            text: 'Seu vinho foi adicionado ao carrinho.',
-            icon: 'success',
-            confirmButtonText: 'Continuar comprando'
-            })
-            });
-        </script>
-        <br>
-
-    
-        <input type="text"  placeholder="CUMPOM DE DESCONTO" >
-        <button id="desconto">Aplicar</button><br>
+  
+        <footer class="rodape">
+            <p class="creditos">&copy; Vinheria Agnello</p>
+          </footer>
+          <script src=
         <script>
             document.getElementById("desconto").addEventListener("click", function() {
             if(desconto == 'fiap2024'){
@@ -40,16 +54,18 @@
                 alert('Desconto aplicado')
             }
             })
+
+            document.getElementById('btnComprar').addEventListener('click', function() {
+            Swal.fire({
+            title: 'Adicionado ao carrinho!',
+            text: 'Seu vinho foi adicionado ao carrinho.',
+            icon: 'success',
+            confirmButtonText: 'Continuar comprando'
+            })
+            });
         </script>
-        <div class="texto">
-        <h1>Sobre o vinho</h1>
-        </p>Elaborado com a Cabernet Sauvignon selecionada de cinco diferentes vinhedos de altitude da família Catena Zapata, </p>
-        </p> é um tinto concentrado, que exibe um distinto caráter varietal. Considerado como "soberbo" por Robert Parker, que destacou também seu frescor, </p>
-        </p> os taninos refinados, ótimo foco e final saboroso. Vinho de entrada da linha Catena, já foi descrito por Jancis Robinson como sofisticado, maduro,</p>
-        </p> bastante complexo, com camadas de um Bordeaux, arrematando a mais alta nota num painel com 50 vinhos argentinos avaliados pela jornalista.</p>
-        </div>
-      
-        <script src="/catalogo.js"></script>
+
+
     </body>
 </html>
 
