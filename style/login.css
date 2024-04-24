@@ -1,0 +1,95 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px;
+    background-color: #800020;
+  }
+  .cabecalho nav {
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+  }
+  .cabecalho ul {
+    padding: 0px, 10px;
+    display: flex;
+  }
+  .cabecalho li {
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+    margin: 10px 5px;
+    padding: 5px;
+  }
+  
+  .cabecalho a {
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+}
+
+form{
+    background-color: white;
+    max-width: 500px;
+    width: 70%;
+    padding: 20px ;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+form h3 {
+text-align: center;
+color: #333333;
+
+}
+
+form input[type=text],
+form input[type=password]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px; 
+    margin: 10px 0;
+}
+
+
+form input[type=button]{
+    width:100%; 
+    height:30px;
+    cursor: pointer; 
+    background:#75273c; 
+    color: white;
+    border-radius: 20px;
+    transition: 1s;
+
+}
+
+form input[type=button]:houver{
+    background-color: #333333;
+
+}
+
+
+  
+.rodape {
+    position: sticky;
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    background-color: #333333;
+    color: #fff;
+    align-items: center;
+}
+
+.creditos {
+    font-style: italic;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+body{
+    background-color: #800020;
+}

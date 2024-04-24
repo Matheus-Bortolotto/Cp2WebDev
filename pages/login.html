@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/login.css">
+</head>
+<header>
+  <nav class="cabecalho">
+    <ul>
+        <li><a href="./login.html">LOGIN</a></li>
+      <li><a href="./home.html">HOME</a></li>
+      <li><a href="./catalogo.html">CATALOGO</a></li>
+      <li><a href="./contato.html">CONTATO</a></li>
+      <li><a href="./vinhos.html">VINHOS</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <main>
+    <form>
+        <h3>Login</h3>
+        <input type="text"  placeholder="Seu e-mail..." id="login" /> 
+        <input type="password"  placeholder="Sua senha......." id="senha" /> 
+        <input type="button" name="acao" value="Enviar" onclick="logar()" />
+    </form>
+  </main>
+
+  <footer class="rodape">
+    <p class="creditos">&copy; Vinheria Agnello</p>
+  </footer>
+  <script src="..//javascript/login.js"></script>
+</body>
+</html>
