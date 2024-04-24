@@ -80,31 +80,7 @@
   margin-bottom: 20px;
 }
 
-*/ .comment p {
+.comment p {
   font-size: 16px;
   line-height: 1.6;
-}
-
-#commentForm button {
-  background-color: #5c0029;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#commentText {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#commentText:focus {
-  outline: none;
-  border-color: #5c0029;
 }
