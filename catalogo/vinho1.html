@@ -25,10 +25,17 @@
                 <h1>Catena Cabernet Sauvignon 2021</h1>
                 <img src="../img/vinho1.jpg" alt="">
                 <div class="preco">R$ 70,00</div>
-                <input type="number" id="spinNumber" min="1" max="999" type="number">
-                <button id="btnComprar">Adicionar ao carrinho</button>
-                <input type="text"  placeholder="CUMPOM DE DESCONTO" >
-                <button id="desconto">Aplicar</button><br>
+                <input type="number" id="num1" placeholder="Quantidade de vinho">
+                
+                <!-- mudar preço do vinho  -->
+                <label type="number" id="num2" placeholder="Segundo número">
+                <button onclick="calculate()">Adciconar ao carrinho</button>
+                <p id="result"></p>
+            
+                <label for="coupon">Cupom de desconto:</label>
+                <input type="text" id="coupon">
+                <button onclick="applyDiscount()">Aplicar Desconto</button>
+                <p id="discountResult"></p>
             </div>
                 
             <div class="div2">
@@ -41,30 +48,38 @@
             
         </div>
   
-        <footer class="rodape">
-            <p class="creditos">&copy; Vinheria Agnello</p>
-          </footer>
-          <script src=
         <script>
-            document.getElementById("desconto").addEventListener("click", function() {
-            if(desconto == 'fiap2024'){
-                alert ('desconto  aplicado!');
-            }
-            else {
-                alert('Desconto aplicado')
-            }
-            })
-
-            document.getElementById('btnComprar').addEventListener('click', function() {
+            function calculate() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            // var num2 = parseFloat(document.getElementById("num2").value);
+            // valor da vinho
+            var num2 = 70
+            var result = num1 * num2;
             Swal.fire({
             title: 'Adicionado ao carrinho!',
             text: 'Seu vinho foi adicionado ao carrinho.',
             icon: 'success',
             confirmButtonText: 'Continuar comprando'
             })
-            });
-        </script>
 
+            document.getElementById("result").innerText = "Preço total: " + result;
+        }
+
+        function applyDiscount() {
+            var coupon = document.getElementById("coupon").value;
+
+            // Verificar se o cupom de desconto está correto
+            if (coupon === "FIAP2024") {
+                var result = parseFloat(document.getElementById("result").innerText.split(": ")[1]);
+                var discount = result * 0.10; // Desconto de 10%
+                var discountedResult = result - discount;
+
+                document.getElementById("discountResult").innerText = "CUPOM 'FIAP 2024' APLICADO, VOCÊ GANHOU 10% NA SUA COMPRA!!: R$" + discountedResult.toFixed(2);
+            } else {
+                document.getElementById("discountResult").innerText = "Cupom de desconto inválido";
+            }
+        }
+    </script>
 
     </body>
 </html>

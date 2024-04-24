@@ -24,24 +24,25 @@
             <div class="div1">
                 <h1>Vinho Chileno Picarón Carmenére </h1>
                 <img src="../img/vinho9.jpg" alt="">
-                <div class="preco">R$ 70,00</div>
-                <input type="number" id="spinNumber" min="1" max="999" type="number">
-                <button id="btnComprar">Adicionar ao carrinho</button>
-                <input type="text"  placeholder="CUMPOM DE DESCONTO" >
-                <button id="desconto">Aplicar</button><br>
-            </div>
+                <div class="preco">R$ 50,00</div>
+                <input type="number" id="num1" placeholder="Quantidade de vinho">
                 
+                <!-- mudar preço do vinho  -->
+                <label type="number" id="num2" placeholder="Segundo número">
+                <button onclick="calculate()">Adciconar ao carrinho</button>
+                <p id="result"></p>
+            
+                <label for="coupon">Cupom de desconto:</label>
+                <input type="text" id="coupon">
+                <button onclick="applyDiscount()">Aplicar Desconto</button>
+                <p id="discountResult"></p>
+            </div>    
             <div class="div2">
                 <h1>SOBRE O VINHO</h1>
-                </p>Picarón era o gato que cuidava da adega escondida do dono. Quando alguém ousava se aproximar para tentar pegar um pouco de vinho, 
-                Picarón saía da escuridão para espantar os intrusos. Alguns dizem que ainda podem ver os olhos de Picarón no ambiente escuro da adega. 
-                Retire a rolha e descubra os segredos escondidos deste vinho.
-                Caracerísticas:
-                    -Origem: Chile;              
-                    -Região: Valle Central;           
-                    -Volume: 750ml;              
-                    -Teor alcóolico: 12,5%;             
-                    -Temperatura de Serviço: 16 graus.</p>
+                </p>Elaborado com a Cabernet Sauvignon selecionada de cinco diferentes vinhedos de altitude da família Catena Zapata, </p>
+                </p> é um tinto concentrado, que exibe um distinto caráter varietal. Considerado como "soberbo" por Robert Parker, que destacou também seu frescor, </p>
+                </p> os taninos refinados, ótimo foco e final saboroso. Vinho de entrada da linha Catena, já foi descrito por Jancis Robinson como sofisticado, maduro,</p>
+                </p> bastante complexo, com camadas de um Bordeaux, arrematando a mais alta nota num painel com 50 vinhos argentinos avaliados pela jornalista.</p>
             </div>
             
         </div>
@@ -50,23 +51,37 @@
           </footer>
 
         <script>
-            document.getElementById("desconto").addEventListener("click", function() {
-            if(desconto == 'fiap2024'){
-                alert ('desconto  aplicado!');
-            }
-            else {
-                alert('Desconto aplicado')
-            }
-            })
-
-            document.getElementById('btnComprar').addEventListener('click', function() {
+            function calculate() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            // var num2 = parseFloat(document.getElementById("num2").value);
+            // valor da vinho
+            var num2 = 50
+            var result = num1 * num2;
             Swal.fire({
             title: 'Adicionado ao carrinho!',
             text: 'Seu vinho foi adicionado ao carrinho.',
             icon: 'success',
             confirmButtonText: 'Continuar comprando'
             })
-            });
+
+            document.getElementById("result").innerText = "Preço total: " + result;
+        }
+
+        function applyDiscount() {
+            var coupon = document.getElementById("coupon").value;
+
+            // Verificar se o cupom de desconto está correto
+            if (coupon === "FIAP2024") {
+                var result = parseFloat(document.getElementById("result").innerText.split(": ")[1]);
+                var discount = result * 0.10; // Desconto de 10%
+                var discountedResult = result - discount;
+
+                document.getElementById("discountResult").innerText = "CUPOM 'FIAP 2024' APLICADO, VOCÊ GANHOU 10% NA SUA COMPRA!!: R$" + discountedResult.toFixed(2);
+            } else {
+                document.getElementById("discountResult").innerText = "Cupom de desconto inválido";
+            }
+        }
+    </script>
         </script>
 
 
